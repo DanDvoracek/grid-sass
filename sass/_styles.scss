@@ -1,0 +1,26 @@
+/* ------------
+************
+		******************************************************************
+		All the styles related to this project should be added in this file
+		******************************************************************
+************
+------------ */
+
+/* GENERIC STYLES FOR ALL DEVICES */
+body {
+	background-color: $light-grey;
+	color: $black;
+}
+
+.content {
+	@extend %silent;
+	// Container helper-mixin from Susy
+	// @include container;
+	// @include padding-large;
+	background-color: $white;
+}
+
+.images {
+	@extend %silent;
+	@include use-sprite("test");
+}

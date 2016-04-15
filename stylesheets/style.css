@@ -1,0 +1,253 @@
+/* -- EVERYTHING RELATED TO THE GRID COMES HERE -- */
+/* variables */
+/* line 8, ../sass/_grids.scss */
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-17, .grid-18, .grid-19, .grid-20, .grid-21, .grid-22, .grid-23, .grid-24, .grid-25, .grid-26, .grid-27 {
+  float: left;
+  margin: 0 10px;
+}
+
+/* line 13, ../sass/_grids.scss */
+.grid-1.no-gutter, .grid-2.no-gutter, .grid-3.no-gutter, .grid-4.no-gutter, .grid-5.no-gutter, .grid-6.no-gutter, .grid-7.no-gutter, .grid-8.no-gutter, .grid-9.no-gutter, .grid-10.no-gutter, .grid-11.no-gutter, .grid-12.no-gutter, .grid-13.no-gutter, .grid-14.no-gutter, .grid-15.no-gutter, .grid-16.no-gutter, .grid-17.no-gutter, .grid-18.no-gutter, .grid-19.no-gutter, .grid-20.no-gutter, .grid-21.no-gutter, .grid-22.no-gutter, .grid-23.no-gutter, .grid-24.no-gutter, .grid-25.no-gutter, .grid-26.no-gutter, .grid-27.no-gutter {
+  margin: 0;
+}
+
+/* Creating the css for columns */
+/* line 19, ../sass/_grids.scss */
+.grid-1 {
+  width: 35.55556px;
+  margin-left: 0;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-2 {
+  width: 71.11111px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-3 {
+  width: 106.66667px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-4 {
+  width: 142.22222px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-5 {
+  width: 177.77778px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-6 {
+  width: 213.33333px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-7 {
+  width: 248.88889px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-8 {
+  width: 284.44444px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-9 {
+  width: 320px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-10 {
+  width: 355.55556px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-11 {
+  width: 391.11111px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-12 {
+  width: 426.66667px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-13 {
+  width: 462.22222px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-14 {
+  width: 497.77778px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-15 {
+  width: 533.33333px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-16 {
+  width: 568.88889px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-17 {
+  width: 604.44444px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-18 {
+  width: 640px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-19 {
+  width: 675.55556px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-20 {
+  width: 711.11111px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-21 {
+  width: 746.66667px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-22 {
+  width: 782.22222px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-23 {
+  width: 817.77778px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-24 {
+  width: 853.33333px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-25 {
+  width: 888.88889px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-26 {
+  width: 924.44444px;
+}
+
+/* line 19, ../sass/_grids.scss */
+.grid-27 {
+  width: 960px;
+  margin-right: 0;
+}
+
+/* Creating the breakpoints */
+/* line 116, ../sass/_grids.scss */
+.header {
+  background: red;
+}
+@media all and (min-width: 320px) and (max-width: 680px) {
+  /* line 116, ../sass/_grids.scss */
+  .header {
+    background: green;
+  }
+}
+@media all and (min-width: 680px) and (max-width: 1440px) {
+  /* line 116, ../sass/_grids.scss */
+  .header {
+    background: yellow;
+  }
+}
+
+/* line 129, ../sass/_grids.scss */
+.footer {
+  background: red;
+}
+@media all and (min-width: 320px) and (max-width: 680px) {
+  /* line 129, ../sass/_grids.scss */
+  .footer {
+    background: green;
+  }
+}
+@media all and (min-width: 680px) and (max-width: 1440px) {
+  /* line 129, ../sass/_grids.scss */
+  .footer {
+    background: yellow;
+  }
+}
+
+/*
+ * Retina Sprites for Compass
+ * by:              Gaya Kessler
+ * last update:     03/11/14
+ *
+ * Usage:
+ * 1. create two folders in your image directory (in this case 'icons' and 'icons-2x').
+ * 2. adjust the foldernames defined below if you use different names.
+ * 3. create sprite images for pixel ratio 1 screens and put them in the first folder.
+ * 4. create sprite images for pixel ratio 2 screens and put them in the second folder, use the same filenames.
+ * 5. use the sprite-image in your Sass/Scss using: '@include use-sprite(<sprite-name>)'
+ */
+/* 
+Silent class for screen readers. Apply this instead of display none.
+Inspired by: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+*/
+/* line 5, ../sass/_mixins.scss */
+.content, .images {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/* ------------
+************
+		******************************************************************
+		All the styles related to this project should be added in this file
+		******************************************************************
+************
+------------ */
+/* GENERIC STYLES FOR ALL DEVICES */
+/* line 10, ../sass/_styles.scss */
+body {
+  background-color: #f3f3f3;
+  color: #222222;
+}
+
+/* line 15, ../sass/_styles.scss */
+.content {
+  background-color: #fafafa;
+}
+
+/* line 23, ../sass/_styles.scss */
+.images {
+  background-image: url('../images/icons-s49e15e2141.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 397px;
+  width: 400px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  /* line 23, ../sass/_styles.scss */
+  .images {
+    background-image: url('../images/icons-2x-s6b8486826d.png');
+    background-size: 400px 397px;
+    background-position: 0 0;
+    height: 397px;
+    width: 400px;
+  }
+}

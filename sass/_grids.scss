@@ -1,0 +1,140 @@
+/* -- EVERYTHING RELATED TO THE GRID COMES HERE -- */
+
+/* variables */
+$width : 960px;
+$columns : 27;
+$IE: false;
+
+%grid {
+	float:left;
+	margin: 0 10px;
+}
+
+%no-gutter {
+	margin: 0;
+}
+
+/* Creating the css for columns */
+@for $i from 1 to $columns+1 {
+	.grid-#{$i} {
+		@extend %grid;
+		width: $width/$columns*$i;
+
+		@if $i == $columns {
+			margin-right: 0;		
+		}
+
+		@if $i == 1 {
+			margin-left: 0;		
+		}
+
+		&.no-gutter {
+			@extend %no-gutter;
+		}
+	}
+
+}
+
+/* Creating the breakpoints */
+$breakpoints: (
+    (phone 		320px)
+    (tablet 	680px)
+    (desktop 	1170px)
+    (extended 	1440px)
+);
+
+@function getBreakpointWidth($name) {
+
+    @each $breakpoint in $breakpoints {
+        $breakpoint-name:  nth($breakpoint, 1);
+        $breakpoint-width: nth($breakpoint, 2);
+
+        @if $name == $breakpoint-name {
+            @return $breakpoint-width;
+        }
+    }
+
+    @return 'Breakpoint #{$name} not found'
+
+}
+
+@mixin breakpoint($min: false, $max: false, $and: false){
+
+	// Initialize variables
+	$minWidth : 0;
+	$maxWidth : 0;
+    $mediaQuery : '';
+
+    @if $min {
+
+		$minWidth : getBreakpointWidth($min);
+
+	}
+
+	@if $max {
+
+		$maxWidth : getBreakpointWidth($max);
+
+	}
+
+	@if $minWidth != 0 { 
+
+		$mediaQuery: '#{$mediaQuery} and (min-width: #{$minWidth})';
+
+	}
+
+	@if $maxWidth != 0 {
+
+		$mediaQuery: '#{$mediaQuery} and (max-width: #{$maxWidth})';
+
+	}
+
+	@if $and { 
+
+		$mediaQuery: '#{$mediaQuery} and #{$and}'; 
+
+	}
+
+	@if $IE == false {
+
+		@media all #{$mediaQuery} {
+
+			@content;
+
+		}
+
+	}
+
+	@if $IE == true and $minWidth != 0 {
+
+		@content;
+
+	}
+
+}
+
+.header {
+	background: red;
+
+	@include breakpoint(phone, tablet){
+		background: green;
+	}
+	
+
+	@include breakpoint(tablet, extended){
+		background: yellow;
+	}
+}
+
+.footer {
+	background: red;
+
+	@include breakpoint(phone, tablet){
+		background: green;
+	}
+	
+
+	@include breakpoint(tablet, extended){
+		background: yellow;
+	}
+}

@@ -1,0 +1,22 @@
+/* 
+Silent class for screen readers. Apply this instead of display none.
+Inspired by: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+*/
+%silent {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+@mixin padding-large {
+	padding: 20px;
+}
+
+@mixin padding-small {
+	padding: 10px;
+}
